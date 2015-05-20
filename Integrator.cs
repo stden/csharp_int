@@ -37,10 +37,10 @@ namespace TrapInt {
         ///     Конструктор - инициализация параметров
         /// </summary>
         /// <param name="f">Функция для интегрирования</param>
-        /// <param name="a"></param>
-        /// <param name="b"></param>
-        /// <param name="eps"></param>
-        /// <param name="n"></param>
+        /// <param name="a">Начало интервала</param>
+        /// <param name="b">Конец интервала</param>
+        /// <param name="eps">Точность вычислений</param>
+        /// <param name="n">Начальное число разбиений отрезка интегрирования</param>
         public Integrator(IFunction f, double a, double b, double eps, int n) {
             F = f;
             A = a;
@@ -56,6 +56,10 @@ namespace TrapInt {
             get { return (B - A)/N; }
         }
 
+        /// <summary>
+        ///     Интегрирование одним из методов (метод определяется потомком)
+        /// </summary>
+        /// <returns>Значение интеграла</returns>
         public abstract double Integral();
 
         /// <summary>
