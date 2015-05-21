@@ -188,3 +188,7 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 *.DotSettings
+*.local
+*.exe
+*.dproj
+*.res
