@@ -7,6 +7,8 @@
 
 Uses SysUtils, Windows;
 
+type real = extended; // Максимальная точность
+
 var
   s1, s2, // Рабочие переменные
   x, // Переменная интегрирования
@@ -19,6 +21,7 @@ begin
   result := 1.0 / sqrt(2 * x * x + 0.3);
 end;
 
+// Для вывода русских букв в старых Delphi
 function Prompt(ps: PWideChar): PAnsiChar;
 var
   bf: PAnsiChar;
