@@ -1,0 +1,17 @@
+[tools]
+dotnet = "8.0"
+
+[tasks.check]
+run = "git diff --check"
+
+[tasks.build]
+run = "dotnet build ConsoleApp.csproj"
+
+[tasks.test]
+run = "dotnet test ConsoleApp.csproj"
+
+[tasks."dotnet:WinFormsApp:build"]
+run = "dotnet build WinFormsApp.csproj"
+
+[tasks."dotnet:WinFormsApp:test"]
+run = "dotnet test WinFormsApp.csproj"
